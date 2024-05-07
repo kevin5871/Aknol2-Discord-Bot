@@ -16,11 +16,15 @@ class Streamer:
   name: str
 
   def get_stream(self, ret, i) -> tuple:
-    if self.platform == Platform.AFREECA:
-      ret[i] = (self, self.__get_afreeca(self.uid))
-    elif self.platform == Platform.CHZZK:
-      ret[i] = (self, self.__get_chzzk(self.uid))
-    else:
+    try :
+      if self.platform == Platform.AFREECA:
+        ret[i] = (self, self.__get_afreeca(self.uid))
+      elif self.platform == Platform.CHZZK:
+        ret[i] = (self, self.__get_chzzk(self.uid))
+      else:
+        ret[i] = (self, None)
+    except Exception as e:
+      print('error while seraching ' + self.name, '(' + e + ')')
       ret[i] = (self, None)
 
   def __get_chzzk(self, hash, /) -> str | None:
@@ -34,13 +38,16 @@ class Streamer:
         'NID_SES': NID_SES,
       }
     ).json()
-    if res['content']['status'] == 'OPEN' and (
-      res['content']['liveCategory'] == 'Minecraft' or 
-      '놀' in res['content']['liveTitle'] or
-      ('마' in res['content']['liveTitle'] and '크' in res['content']['liveTitle'])
-    ):
-      return res['content']['liveTitle']
-    else:
+    try :
+      if res['content']['status'] == 'OPEN' and (
+        res['content']['liveCategory'] == 'Minecraft' or 
+        '놀' in res['content']['liveTitle'] or
+        ('마' in res['content']['liveTitle'] and '크' in res['content']['liveTitle'])
+      ):
+        return res['content']['liveTitle']
+      else:
+        return None
+    except :
       return None
 
   def __get_afreeca(self, bid, /) -> str | None:

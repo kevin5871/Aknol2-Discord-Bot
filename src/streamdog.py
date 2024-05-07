@@ -36,7 +36,7 @@ class Streamdog:
     prev_stream_title = dict(filter(lambda x: x and x[1], ret))
 
     while True:
-      time.sleep(5)
+      time.sleep(15) # 새로고침 주기
 
       stream_title: dict[str, str] = {}
       streamers = get_streamers()
