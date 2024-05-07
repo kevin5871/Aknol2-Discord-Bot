@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 
-DEBUG = True
+DEBUG = False
 
 #sets prefix and loads intents
 client = commands.Bot(command_prefix = "!", intents = discord.Intents.all())
