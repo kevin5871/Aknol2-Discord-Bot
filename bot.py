@@ -194,6 +194,7 @@ async def update_streamers() :
             content = json.load(file)
         while len(content['notification']) > 0 :
             CHL_ID = os.getenv('CHL_ID')
+            #ERR_ID = os.getenv('ERR_ID')
             msg = content['notification'].pop(0)
             if '시작' in msg :
                 embed = discord.Embed(title = '방송 시작', description = msg, color = discord.Color.blue())
@@ -201,6 +202,9 @@ async def update_streamers() :
             elif '종료' in msg :
                 embed = discord.Embed(title = '방송 종료', description = msg, color = discord.Color.red())
                 await client.get_channel(int(CHL_ID)).send(embed = embed)
+            #elif '에러' in msg :
+                #embed = discord.Embed(title = '에러 발생', description = msg, color = discord.Color.red())
+                #await client.get_channel(int(ERR_ID)).send(embed = embed)
             else :
                 pass
         with open('pipe.json', 'w') as file :

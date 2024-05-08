@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 import os
 import requests
+import json
 
 load_dotenv(verbose=True)
 NID_AUT = os.getenv('NID_AUT')
@@ -24,7 +25,9 @@ class Streamer:
       else:
         ret[i] = (self, None)
     except Exception as e:
-      print('error while seraching ' + self.name, '(' + e + ')')
+      print('error while seraching ' + self.name, '(' + str(e) + ')')
+      with open('./pipe.json', 'w') as file :
+          json.dump({'notification': ['에러 발생 : ' + self.name + ', ' + str(e)]}, file)
       ret[i] = (self, None)
 
   def __get_chzzk(self, hash, /) -> str | None:

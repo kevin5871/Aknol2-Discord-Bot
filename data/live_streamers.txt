@@ -18,11 +18,9 @@ c,bdc57cc4217173f0e89f63fba2f1c6e5,다주
 c,ec857bee6cded06df19dae85cf37f878,노돌리
 c,af3323d30e11ae42c39d7203c7e07fa2,너불
 a,tinkerblond,더빙레이디
-c,8a59b34b46271960c1bf172bb0fac758,앰비션
 c,9d4f299325b38f9183bdb90b8849d912,뱅
 a,maoruyakr,마왕루야
 a,pkdlwpans,싸패
-a,243000,천양
 a,dackda,안겨
 c,4b2f27574a2e60d15bd53f94cbfc4066,코렛트
 c,431d19e0eeeb5ecc1cd9628dc0840c9e,만득
@@ -36,10 +34,8 @@ c,2d4aa2f79b0a397d032c479ef1b37a67,후추
 a,aksen7833,꾸티뉴
 a,gosegu2,고세구
 c,f4c0ddf59bb8e788e393cd5a8a1296b2,콩콩
-a,yoonesaem,윤이샘
 a,rkdakstlr911,강만식
 c,0dcec72cd1033032a77dfced6c0c91f8,핑맨
 a,wjdfogur98,대월향
 a,rmlrl771,끠끼
 a,hockey05,필메
-c,0974bf2ded8c3e124797f7be6d1bdbb5,감블러
