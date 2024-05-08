@@ -1,6 +1,6 @@
-Aknol_Discord_bot
+Aknol2_Discord_bot
 
-버전 1.1 (2024-05-07)
+버전 1.11 (2024-05-08)
 
 Windows : start.bat
 

@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 
-DEBUG = False
+DEBUG = True
 
 #sets prefix and loads intents
 client = commands.Bot(command_prefix = "!", intents = discord.Intents.all())
@@ -130,8 +130,8 @@ async def on_message(message):
                 platform, uid, name = row
                 nml.append(name.strip())
 
-        for i in range(1, len(nml)//30+1) :
-            embed = discord.Embed(title = '전체 스트리머', description = '전체 스트리머 목록입니다. (%d/%d)\n'%(i, len(nml)//30) + ", ".join(nml[(i-1)*30:i*30]), color = discord.Color.dark_green())
+        for i in range(1, math.ceil(len(nml)/30)+1) :
+            embed = discord.Embed(title = '전체 스트리머', description = '전체 스트리머 목록입니다. (%d/%d)\n'%(i, math.ceil(len(nml)/30)) + ", ".join(nml[(i-1)*30:i*30]), color = discord.Color.dark_green())
             await message.channel.send(embed = embed)
             pass
 
