@@ -187,3 +187,4 @@ c,a9b2d7249243fc9edbb2dada5623cb8e,하우카우
 c,912b559dcdd9c9ea1fe97864925738bf,왈도쿤
 c,23d5909c6b808d80ee28a9a2d509fecc,사모장
 y,@CoA_tv,코아
+c,aed9d6557bebfb21ab3d081b862cdd2d,이춘향
