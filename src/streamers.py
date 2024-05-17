@@ -26,8 +26,8 @@ class Streamer:
         ret[i] = (self, None)
     except Exception as e:
       print('error while seraching ' + self.name, '(' + str(e) + ')')
-      with open('./pipe.json', 'w') as file :
-          json.dump({'notification': ['에러 발생 : ' + self.name + ', ' + str(e)]}, file)
+      #with open('./pipe.json', 'w') as file :
+          #json.dump({'notification': ['에러 발생 : ' + self.name + ', ' + str(e)]}, file)
       ret[i] = (self, None)
 
   def __get_chzzk(self, hash, /) -> str | None:
